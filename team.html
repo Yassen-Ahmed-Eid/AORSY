@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--=============== Google Fonts ===============-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/team.css">
+
+    <title>Team Members</title>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="container">
+            <!-- Circles for the loader -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="#" id="logo-link">
+                <i class="fas fa-rocket"></i> AORSY
+            </a>
+        </div>
+        
+        <ul>
+            <li><a  href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a class="active" href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="music-toggle" href="#"><i class="fas fa-music"></i></a></li>
+        </ul>
+    </nav>
+
+
+<div class="container hidden">
+    <div class="row">
+        <div class="card" data-title="Yassen Ahmed Eid">
+            <img src="team/1.webp" alt="Card 1" class="card-image">
+        </div>
+        <div class="card" data-title="Omar Atef Abdelsalam">
+            <img src="team/2.jpg" alt="Card 2" class="card-image">
+        </div>
+        <div class="card" data-title="Amr Mohamed Tawfik">
+            <img src="team/3.jpg" alt="Card 3" class="card-image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="card" data-title="Reham AbdElaleem Mostafa">
+            <img src="team/4.webp" alt="Card 4" class="card-image">
+        </div>
+        <div class="card" data-title="Safwa Abdalgawad Mosalm">
+            <img src="team/5.jpg" alt="Card 5" class="card-image">
+        </div>
+    </div>
+</div>
+
+
+    <!-- Background Music -->
+    <audio id="background-music" src="music/R. Strauss_ 2001_ A Space Odyssey(M4A_128K)_1.m4a" preload="auto"></audio>
+
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/team.js"></script>
+
+</body>
+</html>
+<script>
+    setTimeout(() => {
+        // ابحث عن عنصر الربط (link) الذي يحتوي على ملف CSS المحدد
+        const cssLink = document.querySelector('link[href="css/loader.css"]');
+        
+        // تأكد أن العنصر موجود، ثم احذفه من الصفحة
+        if (cssLink) {
+          cssLink.remove();
+        }
+      }, 2000); // بعد ثانيتين (2000 مللي ثانية)
+    </script>

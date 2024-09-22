@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/game.js" defer></script>
+    <title>Game</title>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="container">
+            <!-- Circles for the loader -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="#" id="logo-link">
+                <i class="fas fa-rocket"></i> AORSY
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a class="active" href="#">Game</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="music-toggle" href="#"><i class="fas fa-music"></i></a></li>
+        </ul>
+    </nav>
+
+    <div id="game-container">
+        <img id="player" src="img/player.png" alt="Player">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-over" style="display: none;">Game Over</div>
+    </div>
+    <div id="game-info">
+        <div id="timer">Time: 0</div>
+        <div id="kill-count">Kills: 0</div>
+    </div>
+    <img id="enemy1" src="img/enemy1.png" style="display: none;">
+    <img id="enemy2" src="img/enemy2.png" style="display: none;">
+    <img id="enemy3" src="img/enemy3.png" style="display: none;">
+    <div id="restart-button"><i class="fa-solid fa-arrow-rotate-right"></i></div>
+    <div id="game-over-message">Game Over</div>
+
+    <!-- Background Music -->
+    <audio id="background-music" src="music/Chicken Invaders 4 (Ultimate Omelette) OST - Title Theme (HQ).mp3" preload="auto"></audio>
+
+    <script src="js/loader.js"></script>
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/home.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
+<script>
+    setTimeout(() => {
+        // ابحث عن عنصر الربط (link) الذي يحتوي على ملف CSS المحدد
+        const cssLink = document.querySelector('link[href="css/loader.css"]');
+        
+        // تأكد أن العنصر موجود، ثم احذفه من الصفحة
+        if (cssLink) {
+          cssLink.remove();
+        }
+      }, 2000); // بعد ثانيتين (2000 مللي ثانية)
+      
+    </script>

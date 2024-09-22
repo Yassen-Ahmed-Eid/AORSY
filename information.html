@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--=============== Google Fonts ===============-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/information.css">
+
+    <title>information</title>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="container">
+            <!-- Circles for the loader -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="#" id="logo-link">
+                <i class="fas fa-rocket"></i> AORSY
+            </a>
+        </div>
+        
+        <ul>
+            <li><a  href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="information.html">Information</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="music-toggle" href="#"><i class="fas fa-music"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <button class="nav-button left" id="prev"><i class="fa-solid fa-caret-left"></i></button>
+        <div class="card-container">
+            <div class="card" id="card-0">
+                <div class="image-container">
+                    <img src="img/Picture1.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('Apophis 99942', 'Apophis a near-Earth asteroid that was discovered on June 19, 2004, at the Kitt Peak Observatory in Arizona. It has a diameter of approximately 340 meters, making it a significant object in terms of size. Apophis orbits the Sun at an average distance of 2.1 Astronomical Units (AU) from Earth, with 1 AU being about 150 million kilometers or 93 million miles. Currently, it travels at a velocity of 29.98 kilometers per second. Initially, Apophis drew attention because early calculations suggested it had a small chance of colliding with Earth in 2029, which raised concerns about its potential danger. If an asteroid of Apophis size were to impact Earth, it could cause devastating regional damage. Although the 2029 collision risk has been ruled out, future close approaches still make it an object of scientific interest and monitoring for potential long-term risks.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>Apophis 99942</h3>
+                    <div class="info-line">
+                        <span>Far from Earth : 2.1 AU </span>
+                        <span>diameter : 340m</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-1">
+                <div class="image-container">
+                    <img src="img/Picture2.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 2', 'هذا هو النص الخاص بالبطاقة 2.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 2</h3>
+                    <div class="info-line">
+                        <span>البعد: 80 سم</span>
+                        <span>الحجم: متوسط</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-2">
+                <div class="image-container">
+                    <img src="img/Picture3.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 3', 'هذا هو النص الخاص بالبطاقة 3.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 3</h3>
+                    <div class="info-line">
+                        <span>البعد: 90 سم</span>
+                        <span>الحجم: صغير</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-3">
+                <div class="image-container">
+                    <img src="img/Picture4.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 4', 'هذا هو النص الخاص بالبطاقة 4.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 4</h3>
+                    <div class="info-line">
+                        <span>البعد: 75 سم</span>
+                        <span>الحجم: صغير</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-4">
+                <div class="image-container">
+                    <img src="img/Picture5.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 5', 'هذا هو النص الخاص بالبطاقة 5.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 5</h3>
+                    <div class="info-line">
+                        <span>البعد: 85 سم</span>
+                        <span>الحجم: كبير</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-5">
+                <div class="image-container">
+                    <img src="img/6.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 6', 'هذا هو النص الخاص بالبطاقة 6.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 6</h3>
+                    <div class="info-line">
+                        <span>البعد: 95 سم</span>
+                        <span>الحجم: متوسط</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-6">
+                <div class="image-container">
+                    <img src="img/7.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 7', 'هذا هو النص الخاص بالبطاقة 7.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 7</h3>
+                    <div class="info-line">
+                        <span>البعد: 70 سم</span>
+                        <span>الحجم: صغير</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-7">
+                <div class="image-container">
+                    <img src="img/8.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 8', 'هذا هو النص الخاص بالبطاقة 8.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 8</h3>
+                    <div class="info-line">
+                        <span>البعد: 60 سم</span>
+                        <span>الحجم: كبير</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-8">
+                <div class="image-container">
+                    <img src="img/9.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 9', 'هذا هو النص الخاص بالبطاقة 9.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 9</h3>
+                    <div class="info-line">
+                        <span>البعد: 55 سم</span>
+                        <span>الحجم: متوسط</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card-9">
+                <div class="image-container">
+                    <img src="img/10.jpg" alt="Card Image">
+                    <a href="#" class="icon" onclick="openPopup('عنوان 10', 'هذا هو النص الخاص بالبطاقة 10.')">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>عنوان 10</h3>
+                    <div class="info-line">
+                        <span>البعد: 50 سم</span>
+                        <span>الحجم: صغير</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="nav-button right" id="next"><i class="fa-solid fa-caret-right"></i></button>
+    </div>
+    
+    <div class="popup" id="popup" style="display: none;">
+        <div class="popup-content">
+            <button class="close" onclick="closePopup()">X</button>
+            <h2 id="popup-title" style="color: rgb(245, 38, 38); margin-bottom: 12px;">معلومات إضافية</h2>
+            <p id="popup-text" style="color: rgb(255, 255, 255);">هذا هو النص داخل البطاقة. يمكنك إضافة أي محتوى تريده هنا.</p>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" src="music/INTERSTELLAR.mp3" preload="auto"></audio>
+
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <script src="js/information.js"></script>
+</body>
+</html>
+<script>
+    setTimeout(() => {
+        // ابحث عن عنصر الربط (link) الذي يحتوي على ملف CSS المحدد
+        const cssLink = document.querySelector('link[href="css/loader.css"]');
+        
+        // تأكد أن العنصر موجود، ثم احذفه من الصفحة
+        if (cssLink) {
+          cssLink.remove();
+        }
+      }, 2000); // بعد ثانيتين (2000 مللي ثانية)
+
+    </script>

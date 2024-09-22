@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--=============== Google Fonts ===============-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/about.css">
+
+    <title>About</title>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="container">
+            <!-- Circles for the loader -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="#" id="logo-link">
+                <i class="fas fa-rocket"></i> AORSY
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a class="active"href="about.html">About</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="music-toggle" href="#"><i class="fas fa-music"></i></a></li>
+        </ul>
+    </nav>
+<section>
+    <!-- Main Section with Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="about.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="text-container">
+        <p id="text"></p>
+    </div>
+    <div id="text-container2">
+        <p id="text2"></p>
+    </div>
+    <div id="text-container3">
+        <p id="text3"></p>
+    </div>
+    <div id="text-container4">
+        <p id="text4"></p>
+    </div>
+    <div id="text-container5">
+        <p id="text5"></p>
+    </div>
+</section>
+
+
+    <!-- Background Music -->
+    <audio id="background-music" src="music/INTERSTELLAR.mp3" preload="auto"></audio>
+
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
+<script>
+    setTimeout(() => {
+        // ابحث عن عنصر الربط (link) الذي يحتوي على ملف CSS المحدد
+        const cssLink = document.querySelector('link[href="css/loader.css"]');
+        
+        // تأكد أن العنصر موجود، ثم احذفه من الصفحة
+        if (cssLink) {
+          cssLink.remove();
+        }
+      }, 2000); // بعد ثانيتين (2000 مللي ثانية)
+      
+    </script>

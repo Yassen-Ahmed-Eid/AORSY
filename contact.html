@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--=============== Google Fonts ===============-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <title>Contact us</title>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="container">
+            <!-- Circles for the loader -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="#" id="logo-link">
+                <i class="fas fa-rocket"></i> AORSY
+            </a>
+        </div>
+        
+        <ul>
+            <li><a  href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <li><a id="music-toggle" href="#"><i class="fas fa-music"></i></a></li>
+        </ul>
+    </nav>
+
+<!-- Contact Us Form -->
+<form  action="https://api.web3forms.com/submit" method="POST"  class="login__form login__form--contact " id="contactForm">
+    <input type="hidden" name="access_key" value="2be2bcca-3bb5-4a1f-b0dd-55825424429c" />
+    <input type="hidden" name="subject" value="New Contact Form ASORY website" />
+    <input type="hidden" name="from_name" value="My Website" />
+
+    <h1 class="login__title">Contact Us</h1>
+    <div class="login__content">
+        <div class="login__box">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <div class="login__box-input">
+                <input name="Name" type="text" required class="login__input" id="contact-name" placeholder=" ">
+                <label for="contact-name" class="login__label">Name</label>
+            </div>
+        </div>
+        <div class="login__box">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="login__box-input">
+                <input name="Email" type="email" required class="login__input" id="contact-email" placeholder=" ">
+                <label for="contact-email" class="login__label">Email</label>
+            </div>
+        </div>
+        <div class="login__box">
+            <i class="fa-solid fa-message"></i>
+                <div class="login__box-input">
+                <input name="Massage" type="text" required class="login__input" id="contact-Massage" placeholder=" ">
+                <label for="contact-Massage" class="login__label">Massage</label>
+            </div>
+        </div>
+    <button type="submit" class="login__button">
+        Send   
+        <i class="fa-solid fa-rocket fa-lg login__rocket-icon" style="color: #0f0f0f; --fa-rotate-angle: 45deg;"></i>
+    </button>
+    <!-- Social Media Icons -->
+</form>
+<!-- Footer Start -->
+
+    <!-- Background Music -->
+    <audio id="background-music" src="music/INTERSTELLAR.mp3" preload="auto"></audio>
+
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
+<script>
+setTimeout(() => {
+    // ابحث عن عنصر الربط (link) الذي يحتوي على ملف CSS المحدد
+    const cssLink = document.querySelector('link[href="css/loader.css"]');
+    
+    // تأكد أن العنصر موجود، ثم احذفه من الصفحة
+    if (cssLink) {
+      cssLink.remove();
+    }
+  }, 2000); // بعد ثانيتين (2000 مللي ثانية)
+  
+</script>
