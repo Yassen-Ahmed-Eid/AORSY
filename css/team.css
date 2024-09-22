@@ -1,0 +1,193 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  --body-font: "Orbitron", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button 
+   {
+    background-image: url('../img/19616.jpg'); /* ضع المسار الصحيح للصورة هنا */
+    background-size: cover; /* لجعل الصورة تغطي كامل الصفحة */
+    background-position: center; /* لتوسيط الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    background-attachment: fixed; /* لجعل الخلفية ثابتة عند التمرير */
+  }
+
+/* تصميم الشريط العلوي */
+nav {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* تنسيق الشعار */
+nav .logo a {
+  font-family: 'Cursive', 'Fantasy';
+  font-size: 36px;
+  color:   #ebeaea; /* لون الصاروخ فضي */
+  ; /* لون أبيض */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* إزالة التسطير تحت النص */
+}
+
+/* إضافة شكل الصاروخ وتنسيقه */
+nav .logo i {
+  margin-right: 10px; /* مسافة بين الصاروخ والنص */
+  color: #ebeaea; /* لون الصاروخ فضي */
+  font-size: 30px; /* حجم الصاروخ */
+}
+
+/* تنسيق القائمة */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* تنسيق الروابط */
+nav ul li a {
+  color: #ebeaea; /* لون فضي */
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+.active {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*************************************/
+/*=============== CSS ===============*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* لون خلفية الصفحة */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* لضمان ملء الصفحة عموديًا */
+}
+
+.container {
+  padding-top: 20px; /* المسافة من أعلى الصفحة */
+  padding-bottom: 50px; /* المسافة من أسفل الصفحة */
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  justify-content: center; /* محاذاة عموديًا في الوسط */
+  align-items: center; /* محاذاة أفقيًا في الوسط */
+  gap: 50px; /* المسافة بين الصفوف */
+  
+}
+
+.row {
+  display: flex;
+  gap: 50px; /* المسافة بين الكروت */
+}
+
+.card {
+  position: relative; /* مهم لتحديد موقع العناصر الداخلية بالنسبة للكارت */
+  width: 300px;
+  height: 350px;
+  border-radius: 10px; /* لتدوير الزوايا */
+  overflow: hidden; /* لإخفاء أي محتوى يتجاوز حدود الكارت */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ظل أكثر كثافة */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التكبير والظل */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* لتعديل حجم الصورة بحيث تغطي الكارت */
+}
+
+/*================ Hover Effect ================*/
+.card:hover {
+  transform: scale(1.05); /* تكبير الكارت عند التمرير */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ظل أعمق عند التمرير */
+}
+
+/*================ Overlay Text ================*/
+.card::after {
+  content: attr(data-title); /* استخدام نص موجود في خاصية data-title */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* خلفية رمادية شفافة */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem; /* حجم النص */
+  font-weight: bold;
+  opacity: 0; /* بدءًا من الشفافية */
+  transition: opacity 0.3s ease; /* تأثير التلاشي */
+  border-radius: 10px; /* تدوير الزوايا لتتناسب مع الكارت */
+}
+
+.card:hover::after {
+  opacity: 1; /* جعل النص مرئي عند التمرير */
+}
+
+
+/* Add a class to show the container */
+.visible {
+  display: block;
+}

@@ -1,0 +1,221 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  --body-font: "Orbitron", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--black-color); /* تغيير لون الخلفية إلى الأسود */
+  color: var(--white-color); /* تغيير لون النص إلى الأبيض ليتباين مع الخلفية */
+}
+
+/* تصميم الشريط العلوي */
+nav {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* تنسيق الشعار */
+nav .logo a {
+  font-family: 'Cursive', 'Fantasy';
+  font-size: 36px;
+  color:   #ebeaea; /* لون الصاروخ فضي */
+  ; /* لون أبيض */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* إزالة التسطير تحت النص */
+}
+
+/* إضافة شكل الصاروخ وتنسيقه */
+nav .logo i {
+  margin-right: 10px; /* مسافة بين الصاروخ والنص */
+  color: #ebeaea; /* لون الصاروخ فضي */
+  font-size: 30px; /* حجم الصاروخ */
+}
+
+/* تنسيق القائمة */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* تنسيق الروابط */
+nav ul li a {
+  color: #ebeaea; /* لون فضي */
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+.active {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+/*=============== MAIN SECTION ===============*/
+/*=============== MAIN SECTION ===============*/
+#main-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+}
+
+/* Text container styling */
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+  text-align: center;
+}
+
+#text-animation {
+  font-size: 3em; /* Increase font size as needed */
+  color: #dbdbdb; /* Change text color if needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+  animation: typing 3s steps(40, end) 3s 1 normal both, blink-caret .75s step-end infinite;
+}
+
+#text-container {
+  display: flex;
+  padding-top: 70px;
+  padding-left: 15px;
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+#text {
+  font-size: 3em; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #bcc8ff; /* Change text color if needed */
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+}
+
+#text-container2 {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 14px;
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+#text2 {
+  font-size: 1.4em; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+}
+
+#text-container3 {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+#text3 {
+  font-size: 1.4em; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+}
+
+#text-container4 {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+#text4 {
+  font-size: 1.4em; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+}
+#text-container5 {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+#text5 {
+  font-size: 1.4em; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* New Section Styling */

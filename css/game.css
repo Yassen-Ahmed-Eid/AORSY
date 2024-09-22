@@ -1,0 +1,182 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  --body-font: "Orbitron", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  /*========== Margins ==========*/
+  --header-height: 50px; /* ارتفاع الشريط العلوي */
+  --enemy-margin-top: 10px; /* تقليل المسافة بين الأعداء والشريط العلوي */
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* تعيين خلفية الجسم ولون النص */
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background: url('../img/dd.webp') no-repeat center center fixed; /* تعيين الصورة كخلفية */
+  background-size: cover; /* ضمان تغطية الصورة لكامل الخلفية */
+  color: var(--white-color); /* تغيير لون النص إلى الأبيض ليتباين مع الخلفية */
+  height: 100vh; /* التأكد من أن الجسم يمتد على ارتفاع الشاشة بالكامل */
+  margin: 0;
+  overflow: hidden; /* إخفاء التمرير للتأكد من عدم وجود شريط تمرير */
+  position: relative; /* التأكد من أن العناصر الثابتة ستكون في موقع نسبي */
+}
+
+
+/* تصميم الشريط العلوي */
+nav {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* تثبيت الشريط العلوي */
+  z-index: 10; /* التأكد من أن الشريط العلوي يكون فوق أي عناصر أخرى */
+  height: var(--header-height); /* ارتفاع الشريط العلوي */
+}
+
+/* تنسيق الشعار */
+nav .logo a {
+  font-family: 'Cursive', 'Fantasy';
+  font-size: 36px;
+  color: #ebeaea; /* لون الصاروخ فضي */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* إزالة التسطير تحت النص */
+}
+
+/* إضافة شكل الصاروخ وتنسيقه */
+nav .logo i {
+  margin-right: 10px; /* مسافة بين الصاروخ والنص */
+  color: #ebeaea; /* لون الصاروخ فضي */
+  font-size: 30px; /* حجم الصاروخ */
+}
+
+/* تنسيق القائمة */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* تنسيق الروابط */
+nav ul li a {
+  color: #ebeaea; /* لون فضي */
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+.active {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+/* تنسيق معلومات اللعبة */
+#game-info {
+  position: absolute;
+  top: calc(var(--header-height) + var(--enemy-margin-top)); /* ضبط الموقع بناءً على ارتفاع الشريط العلوي والمسافة بين الأعداء والشريط العلوي */
+  left: 50%;
+  transform: translateX(-50%); /* التمركز الأفقي */
+  display: flex;
+  gap: 20px; /* المسافة بين العناصر */
+  font-size: 18px; /* حجم الخط يمكن تعديله حسب الحاجة */
+  color: white; /* لون النص، يمكنك تغييره حسب الخلفية */
+  z-index: 1000; /* تأكد أن العناصر فوق أي عناصر أخرى */
+}
+
+/* تنسيق الطيارة */
+#player {
+  position: absolute;
+  bottom: 30px; /* المسافة من أسفل الشاشة */
+  left: 50%;
+  transform: translateX(-50%); /* التمركز الأفقي */
+  width: 50px; /* تحديد العرض (يمكن تغييره حسب الحاجة) */
+  height: 50px; /* تحديد الارتفاع (يمكن تغييره حسب الحاجة) */
+}
+
+/* تنسيق الطلقات */
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: #f39c12; /* لون الطلقة */
+  transform: translateX(-50%); /* التمركز الأفقي */
+}
+
+/* تنسيق الأعداء */
+.enemy {
+  position: absolute;
+  width: 50px; /* عرض العدو */
+  height: 50px; /* ارتفاع العدو */
+  transform: translate(-50%, -50%); /* التمركز من المنتصف */
+}
+#game-over-message {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold; /* Make the text bold */ 
+  color: red;
+  z-index: 10;
+}
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) translateX(-10px); }
+  25% { transform: translate(-50%, -50%) translateX(10px); }
+  50% { transform: translate(-50%, -50%) translateX(-10px); }
+  75% { transform: translate(-50%, -50%) translateX(10px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+/* إعداد منطقة اللعب */
+#gameCanvas {
+  position: absolute;
+  left: 0; /* إزالة المسافة من الجانب الأيسر */
+  right: 0; /* إزالة المسافة من الجانب الأيمن */
+  top: var(--header-height); /* وضع منطقة اللعب أسفل الشريط العلوي */
+  bottom: 0;
+}
+ /* إضافة CSS للزر */
+ #restart-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease, transform 0.3s ease; /* إضافة انتقال */
+
+}
+#restart-button:hover {
+  color: #f39c12;
+}

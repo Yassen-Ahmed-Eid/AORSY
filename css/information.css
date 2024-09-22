@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+    /*=============== VARIABLES CSS ===============*/
+    :root {
+      /*========== Colors ==========*/
+      --white-color: hsl(0, 0%, 100%);
+      --black-color: hsl(0, 0%, 0%);
+      /*========== Font and typography ==========*/
+      --body-font: "Orbitron", sans-serif;
+      --h1-font-size: 1.75rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .813rem;
+      /*========== Font weight ==========*/
+      --font-medium: 500;
+    }
+
+    /*=============== BASE ===============*/
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
+  
+  body,
+  input,
+  button {
+      font-size: var(--normal-font-size);
+      font-family: var(--body-font);
+      background-image: url('../img/19627.jpg'); /* ضع رابط الصورة هنا */
+      background-size: cover; /* جعل الصورة تغطي الصفحة بالكامل */
+      background-position: center; /* تمركز الصورة في وسط الصفحة */
+      background-repeat: no-repeat; /* منع تكرار الصورة */
+      height: 100vh; /* جعل ارتفاع الصفحة كامل العرض */
+      width: 100vw; /* جعل عرض الصفحة كامل العرض */
+      margin: 0; /* إزالة الهوامش */
+      color: var(--white-color); /* لون النص الأبيض */
+      overflow: hidden; /* إلغاء التمرير */
+  }
+
+    /* تصميم الشريط العلوي */
+    nav {
+      background-color: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    /* تنسيق الشعار */
+    nav .logo a {
+      font-family: 'Cursive', 'Fantasy';
+      font-size: 36px;
+      color: #ebeaea; /* لون الصاروخ فضي */
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      text-decoration: none; /* إزالة التسطير تحت النص */
+    }
+
+    /* إضافة شكل الصاروخ وتنسيقه */
+    nav .logo i {
+      margin-right: 10px; /* مسافة بين الصاروخ والنص */
+      color: #ebeaea; /* لون الصاروخ فضي */
+      font-size: 30px; /* حجم الصاروخ */
+    }
+
+    /* تنسيق القائمة */
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    /* تنسيق الروابط */
+    nav ul li a {
+      color: #ebeaea; /* لون فضي */
+      text-decoration: none;
+      font-weight: normal;
+      transition: color 0.3s, font-weight 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12; /* تغيير اللون عند التمرير */
+      font-weight: bold; /* نص غامق عند التمرير */
+    }
+
+    .active {
+      color: #f39c12; /* تغيير اللون عند التمرير */
+      font-weight: bold; /* نص غامق عند التمرير */
+    }
+
+    /********************/
+  
+    .container {
+      display: flex; 
+      justify-content: center; /* محاذاة الكروت في المنتصف */
+      align-items: center; /* لمحاذاة الكروت عمودياً */
+      gap: 40px; /* تحديد المسافة بين الكروت والزرارين */
+      height: 80vh; /* ارتفاع الحاوية */
+  }
+
+  .card-container {
+      display: flex; 
+      justify-content: center; 
+      overflow: hidden; /* إخفاء الكروت خارج العرض */
+      width: 960px; /* عرض الحاوية */
+      gap: 30px; /* إضافة مسافة بين الكروت */
+
+  }
+
+  .card {
+    width: 400px; /* زيادة عرض الكارت */
+    height: 400px; 
+    background-color: white; 
+    border-radius: 20px; /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    transition: opacity 0.5s ease; /* تأثير التلاشي */
+    opacity: 0; /* جعل الكارت غير مرئي في البداية */
+    overflow: hidden; 
+}
+
+.card-container {
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; /* إخفاء الكروت خارج العرض */
+    width: 1060px; /* عرض الحاوية */
+    gap: 35px; /* إضافة مسافة بين الكروت */
+}
+.card-info {
+  padding: 10px;
+  background-color: none;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #666;
+
+}
+
+.info-line {
+  display: flex; /* استخدام flexbox لعرض العناصر على نفس السطر */
+  justify-content: center; /* محاذاة العناصر في المنتصف */
+  gap: 10px; /* إضافة مسافة بين العناصر */
+}
+
+.card-info span {
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: #9b9898;
+
+}
+  .card img {
+      width: 100%; /* تغطي الصورة عرض الكارت */
+      height: 320px; /* لضبط الطول بشكل تلقائي */
+      aspect-ratio: 1 / 1; /* للحفاظ على الصورة مربعة */
+      object-fit: cover; /* للتأكد من تغطية الصورة للمساحة بدون تشويه */
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* ارتفاع المنطقة المحتوية على الأيقونة */
+    position: relative; /* لوضع الأيقونة بشكل مناسب */
+}
+
+.image-container {
+  position: relative; /* لتحديد موضع الأيقونة */
+}
+
+.image-container img {
+  width: 100%; /* تغطي الصورة عرض الكارت */
+  height: 320px; /* لضبط الطول بشكل تلقائي */
+  object-fit: cover; /* للتأكد من تغطية الصورة للمساحة بدون تشويه */
+  transition: opacity 0.3s; /* تأثير تلاشي للصورة */
+}
+
+.icon {
+  position: absolute; /* تحديد موضع الأيقونة */
+  top: 50%; /* محاذاة للأعلى */
+  left: 50%; /* محاذاة لليسار */
+  transform: translate(-50%, -50%); /* نقل الأيقونة إلى منتصف الصورة */
+  color: white; /* تغيير اللون إلى الأبيض */
+  font-size: 2rem; /* حجم الأيقونة */
+  opacity: 0; /* جعل الأيقونة غير مرئية في البداية */
+  transition: opacity 0.3s, color 0.3s; /* إضافة تأثير تلاشي للأيقونة وتغيير اللون */
+}
+
+/* إظهار الأيقونة عند hover على الصورة */
+.image-container:hover .icon {
+  opacity: 1; /* جعل الأيقونة مرئية */
+}
+
+/* تغيير لون الأيقونة إلى الأبيض عند hover */
+.image-container:hover .icon:hover {
+  color: #ac23a5; /* تغيير اللون */
+}
+
+/* إظهار الأيقونة عند hover على الصورة */
+.image-container:hover .icon {
+  opacity: 1; /* جعل الأيقونة مرئية */
+}
+
+  /**************************************************************************/
+  .nav-button {
+      background: linear-gradient(to right, #6a5acd, #4b0082); /* تدرج بنفسجي */
+      color: white; 
+      border: none; 
+      border-radius: 5px; /* زوايا مدورة بسيطة */
+      width: 40px; /* عرض الزر */
+      height: 40px; /* ارتفاع الزر */
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 1.5rem; /* حجم الأيقونة */
+      position: relative; /* ضروري لتحديد موضع البروز */
+      transition: background 0.3s; 
+  }
+
+  .nav-button::before,
+  .nav-button::after {
+      content: '';
+      position: absolute; 
+      width: 10px; /* عرض البروز */
+      height: 10px; /* ارتفاع البروز */
+      background: linear-gradient(to right, #6a5acd, #4b0082); /* تدرج بنفسجي */
+      border-radius: 5px; /* زوايا مدورة */
+      transition: background 0.3s; 
+  }
+
+  .nav-button::before {
+      top: -5px; /* بروز للأعلى */
+      left: 50%; 
+      transform: translateX(-50%); 
+  }
+
+  .nav-button::after {
+      bottom: -5px; /* بروز للأسفل */
+      left: 50%; 
+      transform: translateX(-50%); 
+  }
+
+  .nav-button:hover {
+      background: linear-gradient(to right, #7b6cdf, #5b0896); /* تدرج بنفسجي */
+  }
+
+  .nav-button:hover::before,
+  .nav-button:hover::after {
+      background: linear-gradient(to right, #7b6cdf, #5b0896); /* تدرج بنفسجي */
+  }
+
+
+  /******************************************************************************/
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+  background: linear-gradient(to right, #4e41a5, #3c0166); /* تدرج بنفسجي */
+  padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 60%; /* عرض النافذة المنبثقة 50% من عرض الصفحة */
+    height: 50%; /* ارتفاع النافذة المنبثقة 40% من ارتفاع الصفحة */
+    max-width: 800px; /* أقصى عرض للنافذة */
+    max-height: 600px; /* أقصى ارتفاع للنافذة */
+}
+.popup-title {
+  margin-bottom: 20px; /* المسافة بين العنوان والنص */
+}
+
+.close {
+  position: absolute;
+  top: -285px; /* جعل المسافة من الأعلى أقل */
+  right: 90px; /* جعل المسافة من اليمين أقل */
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold; /* لجعل النص أكثر سماكة */
+
+  cursor: pointer;
+  color: orange; /* لون برتقالي */
+  z-index: 9999; /* جعل الزر في أعلى طبقة */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

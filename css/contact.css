@@ -1,0 +1,365 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  --body-font: "Orbitron", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button 
+   {
+    background-image: url('../img/1.jpg'); /* ضع المسار الصحيح للصورة هنا */
+    background-size: cover; /* لجعل الصورة تغطي كامل الصفحة */
+    background-position: center; /* لتوسيط الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    background-attachment: fixed; /* لجعل الخلفية ثابتة عند التمرير */
+  }
+
+/* تصميم الشريط العلوي */
+nav {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* تنسيق الشعار */
+nav .logo a {
+  font-family: 'Cursive', 'Fantasy';
+  font-size: 36px;
+  color:   #ebeaea; /* لون الصاروخ فضي */
+  ; /* لون أبيض */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* إزالة التسطير تحت النص */
+}
+
+/* إضافة شكل الصاروخ وتنسيقه */
+nav .logo i {
+  margin-right: 10px; /* مسافة بين الصاروخ والنص */
+  color: #ebeaea; /* لون الصاروخ فضي */
+  font-size: 30px; /* حجم الصاروخ */
+}
+
+/* تنسيق القائمة */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* تنسيق الروابط */
+nav ul li a {
+  color: #ebeaea; /* لون فضي */
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+.active {
+  color: #f39c12; /* تغيير اللون عند التمرير */
+  font-weight: bold; /* نص غامق عند التمرير */
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+.login__content, .login__box {
+  display: grid;
+}
+.login__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.login__box {
+  padding-top: -25px;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+.login__icon, .login__eye {
+  font-size: 1.25rem;
+}
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+.login__box-input {
+  position: relative;
+}
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.login__check, .login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login__check {
+  margin-bottom: 1.5rem;
+}
+.login__check-label, .login__forgot, .login__register {
+  font-size: var(--small-font-size);
+}
+.login__check-group {
+  column-gap: 0.5rem;
+}
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+.login__forgot {
+  color: var(--white-color);
+}
+.login__forgot:hover {
+  text-decoration: underline;
+}
+.login__button {
+  background-color: #ffffff; /* خلفية بيضاء */
+  color: #000000; /* لون النص أسود */
+  border: none; /* إزالة الحدود */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  position: relative;
+  box-shadow: none; /* إزالة أي ظل */
+  background-clip: padding-box; /* التأكد من أن الخلفية تغطي الزر بالكامل */
+}
+.login__button {
+  background-image: none; /* إزالة أي صورة خلفية من الزر */
+}
+
+.login__button i {
+  margin-left: 10px;
+  color: #000000; /* لون الصاروخ أسود */
+  transition: color 0.3s; /* تأثير التمرير */
+}
+.login__button:hover {
+  background-color: #cecece; /* اللون الرمادي للخلفية عند التمرير */
+  color: #000000; /* لون النص يمكن تغييره حسب الحاجة */
+}
+
+.login__register {
+  text-align: center;
+}
+.login__register a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+/* Input focus move up label */
+.login__input:focus + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+/* Input focus sticky top label */
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+
+.login__check-input {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgb(236, 236, 236);
+  background: none;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.login__check-input:checked {
+  border: 2px solid rgb(236, 236, 236);
+}
+
+.login__check-input:checked::before {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+.login__forgot {
+  color: var(--white-color);
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.login__button {
+  background-color: #ffffff; /* تعيين الخلفية إلى اللون الأبيض */
+  color: #000000; /* تغيير لون النص إلى الأسود لضمان الوضوح */
+  border: 2px solid #ffffff; /* إضافة حدود بيضاء للزرار */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  position: relative;
+}
+
+
+.login__rocket-icon {
+  margin-left: 10px;
+  color: #0f0f0f;
+}
+
+.login__register {
+  text-align: center;
+}
+
+.login__register a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+/*************************************************/
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px; /* يمكنك تعديل العرض حسب الحاجة */
+}
+
+.login__content {
+  width: 100%;
+}
+
+.login__button {
+  width: 100%;
+  text-align: center;
+}
